@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.UserCreate">
+   <children>
+      <Label text="Create new account">
+         <padding>
+            <Insets bottom="4.0" />
+         </padding>
+      </Label>
+      <TextField fx:id="username" promptText="username">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin></TextField>
+      <PasswordField fx:id="password" promptText="password">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+      </PasswordField>
+      <TextField fx:id="name" promptText="name">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin></TextField>
+      <Label text="Vaccinated amount">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+      </Label>
+      <Slider fx:id="vacc" blockIncrement="1.0" majorTickUnit="1.0" max="2.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="4.0" />
+         </padding>
+      </Slider>
+      <Button mnemonicParsing="false" onAction="#create" text="Create">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin></Button>
+      <Button mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+   <padding>
+      <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
+   </padding>
+</VBox>

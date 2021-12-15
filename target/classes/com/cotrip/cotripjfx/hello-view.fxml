@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.HelloController">
+    <children>
+        <Label layoutX="296.0" layoutY="152.0" text="Welcome to CO-TRIP 19" />
+        <Label text="A solution to your healthy trip">
+            <VBox.margin>
+                <Insets bottom="10.0" />
+            </VBox.margin>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#onHelloButtonClick" text="I am a tourist">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin></Button>
+    </children>
+</VBox>

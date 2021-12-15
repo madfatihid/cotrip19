@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.UserDashboard">
+   <children>
+      <Label fx:id="welcome" text="Welcome,">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#logout" text="Logout">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+      </Button>
+      <Label fx:id="vaccinationStatus" text="Vaccination Status:">
+         <VBox.margin>
+            <Insets bottom="12.0" />
+         </VBox.margin>
+      </Label>
+      <ComboBox fx:id="comboBox" prefWidth="150.0">
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="America" />
+               <String fx:value="Australia" />
+               <String fx:value="China" />
+               <String fx:value="India" />
+               <String fx:value="Indonesia" />
+               <String fx:value="Japan" />
+               <String fx:value="South Korea" />
+               <String fx:value="United Kingdom" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button mnemonicParsing="false" onAction="#confirm" text="Confirm">
+         <VBox.margin>
+            <Insets bottom="12.0" />
+         </VBox.margin></Button>
+      <Label layoutX="264.0" layoutY="30.0" text="Your request to enter is" />
+      <Label fx:id="result" layoutX="248.0" layoutY="178.0" style="-fx-font-weight: 900;" />
+      <Label fx:id="reason" layoutX="288.0" layoutY="196.0" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
