@@ -17,17 +17,22 @@
       </Label>
       <Button mnemonicParsing="false" onAction="#logout" text="Logout">
          <VBox.margin>
-            <Insets bottom="4.0" />
+            <Insets bottom="8.0" />
          </VBox.margin>
       </Button>
       <Label fx:id="vaccinationStatus" text="Vaccination Status:">
          <VBox.margin>
-            <Insets bottom="12.0" />
+            <Insets bottom="8.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Pick your destination country:">
+         <VBox.margin>
+            <Insets bottom="4.0" />
          </VBox.margin>
       </Label>
       <ComboBox fx:id="comboBox" prefWidth="150.0">
          <VBox.margin>
-            <Insets bottom="4.0" />
+            <Insets bottom="8.0" />
          </VBox.margin>
          <items>
             <FXCollections fx:factory="observableArrayList">
@@ -47,7 +52,7 @@
             <Insets bottom="12.0" />
          </VBox.margin></Button>
       <Label layoutX="264.0" layoutY="30.0" text="Your request to enter is" />
-      <Label fx:id="result" layoutX="248.0" layoutY="178.0" style="-fx-font-weight: 900;" />
+      <Label fx:id="result" layoutX="248.0" layoutY="178.0" style="-fx-font-weight: 900; -fx-font-size: 20;" />
       <Label fx:id="reason" layoutX="288.0" layoutY="196.0" />
    </children>
    <padding>

@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -21,6 +22,8 @@ public class UserLogin {
     private TextField usernameField;
     @FXML
     private TextField passwordField;
+    @FXML
+    private Label error;
 
     @FXML
     protected void back(ActionEvent event) throws IOException {
@@ -51,6 +54,8 @@ public class UserLogin {
                 .findAny()
                 .isEmpty()){
             System.out.println("no credential matched");
+            error.setManaged(true);
+            error.setVisible(true);
             return;
         }
         System.out.println("credential found");
