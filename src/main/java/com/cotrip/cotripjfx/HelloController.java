@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class HelloController {
 
@@ -18,8 +19,26 @@ public class HelloController {
     private Parent root;
 
     @FXML
-    protected void onHelloButtonClick(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(HelloApplication.class.getResource("user-login.fxml"));
+    protected void imTourist(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("user-login.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void imCountry(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("user-login.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void imAdmin(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("user-login.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

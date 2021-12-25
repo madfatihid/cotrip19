@@ -11,13 +11,13 @@ public class Variables {
         touristList.add(new Tourist("yusuf", "abc", "Yusuf Agung", 2));
         touristList.add(new Tourist("fathan", "abc", "Fathan Malik", 1));
 
-        countryList.add(new Country("America", false));
-        countryList.add(new Country("Australia", true));
-        countryList.add(new Country("China", false));
-        countryList.add(new Country("India", true));
-        countryList.add(new Country("Indonesia", false));
-        countryList.add(new Country("Japan", false));
-        countryList.add(new Country("South Korea", false));
-        countryList.add(new Country("United Kingdom", false));
+        countryList.add(new Country("yusuf", "abc", "America", false));
+        countryList.add(new Country("yusuf", "abc", "Australia", true));
+        countryList.add(new Country("yusuf", "abc", "China", false));
+        countryList.add(new Country("yusuf", "abc", "India", true));
+        countryList.add(new Country("yusuf", "abc", "Indonesia", false));
+        countryList.add(new Country("yusuf", "abc", "Japan", false));
+        countryList.add(new Country("yusuf", "abc", "South Korea", false));
+        countryList.add(new Country("yusuf", "abc", "United Kingdom", false));
     }
 }

@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.HelloController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.HelloController">
     <children>
-        <Label layoutX="296.0" layoutY="152.0" text="Welcome to CO-TRIP 19" />
-        <Label text="A solution to your healthy trip">
+        <Label layoutX="296.0" layoutY="152.0" style="-fx-font-size: 30; -fx-font-weight: 900;" text="Welcome to CO-TRIP 19" />
+        <Label style="-fx-font-size: 16;" text="A solution to your healthy trip">
             <VBox.margin>
-                <Insets bottom="10.0" />
+                <Insets bottom="24.0" />
             </VBox.margin>
         </Label>
-        <Button mnemonicParsing="false" onAction="#onHelloButtonClick" text="I am a tourist">
+        <Button mnemonicParsing="false" onAction="#imTourist" text="I am a tourist" textFill="WHITE">
          <VBox.margin>
             <Insets bottom="4.0" />
          </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#imCountry" text="I am a country representative" textFill="WHITE">
+            <VBox.margin>
+                <Insets bottom="4.0" />
+            </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#imAdmin" text="I am an admin" textFill="WHITE">
+            <VBox.margin>
+                <Insets bottom="4.0" />
+            </VBox.margin></Button>
     </children>
 </VBox>
