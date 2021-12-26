@@ -9,11 +9,11 @@
       <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
    </padding>
    <children>
-      <HBox prefHeight="200.0" prefWidth="200.0">
+      <HBox prefHeight="300.0" prefWidth="200.0">
          <children>
             <VBox prefHeight="300.0" HBox.hgrow="ALWAYS">
                <children>
-                  <ListView fx:id="list" prefHeight="200.0" prefWidth="200.0" stylesheets="@stylesheet.css">
+                  <ListView fx:id="list" prefHeight="300.0" prefWidth="200.0" stylesheets="@stylesheet.css">
                      <VBox.margin>
                         <Insets bottom="8.0" />
                      </VBox.margin></ListView>
