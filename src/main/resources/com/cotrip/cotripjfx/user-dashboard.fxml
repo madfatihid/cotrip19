@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.Slider?>
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.UserDashboard">
    <children>
       <Label fx:id="welcome" style="-fx-font-size: 16;" text="Welcome,">
@@ -25,6 +26,14 @@
             <Insets bottom="8.0" />
          </VBox.margin>
       </Label>
+      <Slider fx:id="vacc" blockIncrement="1.0" majorTickUnit="1.0" max="2.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="4.0" />
+         </padding>
+      </Slider>
       <Label text="Pick your destination country:">
          <VBox.margin>
             <Insets bottom="4.0" />
@@ -35,16 +44,16 @@
             <Insets bottom="8.0" />
          </VBox.margin>
          <items>
-            <FXCollections fx:factory="observableArrayList">
-               <String fx:value="America" />
-               <String fx:value="Australia" />
-               <String fx:value="China" />
-               <String fx:value="India" />
-               <String fx:value="Indonesia" />
-               <String fx:value="Japan" />
-               <String fx:value="South Korea" />
-               <String fx:value="United Kingdom" />
-            </FXCollections>
+<!--            <FXCollections fx:factory="observableArrayList">-->
+<!--               <String fx:value="America" />-->
+<!--               <String fx:value="Australia" />-->
+<!--               <String fx:value="China" />-->
+<!--               <String fx:value="India" />-->
+<!--               <String fx:value="Indonesia" />-->
+<!--               <String fx:value="Japan" />-->
+<!--               <String fx:value="South Korea" />-->
+<!--               <String fx:value="United Kingdom" />-->
+<!--            </FXCollections>-->
          </items>
       </ComboBox>
       <Button mnemonicParsing="false" onAction="#confirm" text="Confirm">

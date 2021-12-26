@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cotrip.cotripjfx.CountryLogin">
+    <children>
+        <Label layoutX="296.0" layoutY="152.0" style="-fx-font-size: 16;" text="You are logging in as a country representative">
+            <VBox.margin>
+                <Insets bottom="12.0" />
+            </VBox.margin></Label>
+        <Label fx:id="error" managed="false" text="No credential found" textFill="RED" visible="false">
+            <VBox.margin>
+                <Insets bottom="8.0" />
+            </VBox.margin>
+        </Label>
+
+        <TextField fx:id="usernameField" prefWidth="340.0" promptText="Username">
+            <VBox.margin>
+                <Insets bottom="4.0" />
+            </VBox.margin></TextField>
+        <PasswordField fx:id="passwordField" promptText="Password">
+            <VBox.margin>
+                <Insets bottom="12.0" />
+            </VBox.margin>
+        </PasswordField>
+        <Button mnemonicParsing="false" onAction="#login" text="Login">
+            <VBox.margin>
+                <Insets bottom="4.0" />
+            </VBox.margin></Button>
+        <Button mnemonicParsing="false" onAction="#back" text="Back" />
+    </children>
+    <padding>
+        <Insets bottom="40.0" left="120.0" right="120.0" top="40.0" />
+    </padding>
+</VBox>

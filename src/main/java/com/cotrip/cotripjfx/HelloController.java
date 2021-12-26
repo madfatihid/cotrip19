@@ -29,7 +29,7 @@ public class HelloController {
 
     @FXML
     protected void imCountry(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("user-login.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("country-login.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -38,7 +38,7 @@ public class HelloController {
 
     @FXML
     protected void imAdmin(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("user-login.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("admin-login.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

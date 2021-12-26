@@ -1,5 +1,7 @@
 package com.cotrip.cotripjfx;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,9 +10,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 public class UserDashboard {
     private Stage stage;
@@ -27,11 +31,26 @@ public class UserDashboard {
     private Label welcome;
     @FXML
     private Label vaccinationStatus;
+    @FXML
+    private Slider vacc;
 
     @FXML
     protected void initialize() {
+        ObservableList<String> data = FXCollections.observableArrayList(Variables.countryList.stream()
+                .map(p -> p.getName())
+                .collect(Collectors.toList()));
+        comboBox.setItems(data);
         welcome.setText("Welcome, " + Variables.currentTourist.getName() + "!!");
-        vaccinationStatus.setText("You have vaccinated " + Variables.currentTourist.getVacc() + " time(s)");
+        vaccinationStatus.setText("You have been vaccinated: ");
+        vacc.setValue((double) Variables.currentTourist.getVacc());
+        vacc.setOnMouseReleased(event -> {
+            System.out.println(vacc.getValue());
+            Variables.touristList.forEach(tourist -> {
+                if (tourist == Variables.currentTourist) {
+                    tourist.setVacc((int) vacc.getValue());
+                }
+            });
+        });
     }
 
     @FXML

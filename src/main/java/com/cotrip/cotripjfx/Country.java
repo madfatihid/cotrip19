@@ -25,4 +25,9 @@ public class Country extends Credential {
     public void setClosed(boolean closed) {
         this.closed = closed;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

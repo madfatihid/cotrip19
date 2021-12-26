@@ -13,7 +13,7 @@
          <VBox.margin>
             <Insets bottom="12.0" />
          </VBox.margin></Label>
-      <Label text="No credential found" fx:id="error" managed="false" visible="false" textFill="RED">
+      <Label fx:id="error" managed="false" text="No credential found" textFill="RED" visible="false">
          <VBox.margin>
             <Insets bottom="8.0" />
          </VBox.margin>
